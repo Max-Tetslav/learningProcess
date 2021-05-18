@@ -1,10 +1,28 @@
 /*===== LOGIN SHOW and HIDDEN =====*/
+const singUp = document.getElementById("sing-up"),
+    singIn = document.getElementById("sing-in"),
+    loginIn = document.getElementById("login-in"),
+    loginUp = document.getElementById("login-up");
 
-// Remove classes first if they exist
+singUp.addEventListener("click", () => {
 
-// Add classes
+    // Remove classes first if they exist
+    loginIn.classList.remove("block");
+    loginUp.classList.remove("none");
 
+    // Add classes
+    loginIn.classList.add("none");
+    loginUp.classList.add("block");
 
-// Remove classes first if they exist
+})
+singIn.addEventListener("click", () => {
 
-// Add classes
+    // Remove classes first if they exist
+    loginIn.classList.remove("none");
+    loginUp.classList.remove("block");
+
+    // Add classes
+    loginIn.classList.add("block");
+    loginUp.classList.add("none");
+
+})
