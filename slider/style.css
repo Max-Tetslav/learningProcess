@@ -24,10 +24,16 @@
                     border-radius: 10px;
                 }
                 
-                .slide {
+                .slider .slide {
                     position: absolute;
                     width: 100%;
                     height: 100%;
+                    clip-path: circle(0.0% at 0 50%);
+                }
+                
+                .slide.active {
+                    clip-path: circle(150% at 0 50%);
+                    transition: 1.5s;
                 }
                 
                 .slider .slide img {
@@ -40,9 +46,9 @@
                 .slider .slide .info {
                     position: absolute;
                     color: #222;
-                    background: rgba(255, 255, 255, 0.3);
+                    background: rgba(255, 255, 255, 0.6);
                     width: 75%;
-                    margin-top: 50px;
+                    margin-top: 300px;
                     margin-left: 50px;
                     padding: 20px;
                     border-radius: 5px;
@@ -106,13 +112,17 @@
                 
                 .navigation-visibility .slide-icon {
                     z-index: 999;
-                    background: rgba(255, 255, 255, 0.5);
+                    background: rgba(255, 255, 255, 0.7);
                     width: 20px;
                     height: 10px;
                     transform: translateY(-35px);
                     margin: 0 6px;
                     border-radius: 3px;
                     box-shadow: 0 5px 25px rgb(1 1 1 / 20%)
+                }
+                
+                .navigation-visibility .slide-icon.active {
+                    background: #4285f4;
                 }
                 
                 @media (max-width: 900px) {
